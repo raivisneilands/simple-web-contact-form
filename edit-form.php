@@ -3,8 +3,6 @@
     $last_name = htmlspecialchars($_POST["last-name"]);
     $type = htmlspecialchars($_POST["type"]);
     $comment = htmlspecialchars($_POST["comment"]);
-
-    $selected = "selected";
 ?>
 
 
@@ -31,10 +29,10 @@
         <div class="my-3">
             <label for="type">Type: </label>
             <select name="type" id="type">
-                <option value="query" <?php if ($type == "query") echo $selected;?>>Query</option>
-                <option value="feedback" <?php if ($type == "feedback") echo $selected ?>>Feedback</option>
-                <option value="complaint" <?php if ($type == "complaint") echo $selected ?>>Complaint</option>
-                <option value="other" <?php if ($type == "other") echo $selected ?>>Other</option>
+                <option value="query" <?php if ($type == "query") echo "selected";?>>Query</option>
+                <option value="feedback" <?php if ($type == "feedback") echo "selected" ?>>Feedback</option>
+                <option value="complaint" <?php if ($type == "complaint") echo "selected" ?>>Complaint</option>
+                <option value="other" <?php if ($type == "other") echo "selected" ?>>Other</option>
             </select>
         </div>
 
